@@ -5,7 +5,7 @@ Description: REST API using SAM
 Globals:
   Function:
     Runtime: nodejs12.x
-    Eviroment:
+    Environment:
       Variables:
         TABLE_NAME: !Ref Table
     MemorySize: 128
@@ -13,14 +13,14 @@ Globals:
 
 Resources:
   Table:
-  Type: AWS::Serverless::SimpleTable
-  Properties:
-    PrimaryKey:
-      Name: userid
-      Type: String
-    ProvisionedThroughput:
-      ReadCapacityUnits: 1
-      WriteCapacityUnits: 1
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey:
+        Name: userid
+        Type: String
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
 
   GetUser:
     Type: AWS::Serverless::Function
@@ -34,7 +34,6 @@ Resources:
             Path: /user/{userid}
             Method: get
 
-
   PostUser:
     Type: AWS::Serverless::Function
     Properties:
@@ -45,8 +44,7 @@ Resources:
           Type: Api
           Properties:
             Path: /user/{userid}
-            Method: put
-
+            Method: post
 
   DeleteUser:
     Type: AWS::Serverless::Function

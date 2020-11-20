@@ -2,7 +2,7 @@ const AWS = require('aws-sdk');
 AWS.config.update({ resgion: 'us-east-1' });
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
-const tableName = proces.env.TABLE_NAME;
+const tableName = process.env.TABLE_NAME;
 
 exports.handler = async(event) => {
     // Making the field mandatory use (pathParameters)

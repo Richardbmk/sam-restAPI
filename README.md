@@ -2,3 +2,4 @@
 
 - `npm init -y`
 - `npm install aws-sdk`
+- `sam validate` 

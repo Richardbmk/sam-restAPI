@@ -31,7 +31,7 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: get
-      CodeUri: s3://rick-sam-helloword/d7a35255726fd9bfad8b4953d3882f84
+      CodeUri: s3://rick-sam-helloword/fb9f4876288105c25f8d8c1364bd7188
   PostUser:
     Type: AWS::Serverless::Function
     Properties:
@@ -43,7 +43,7 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: post
-      CodeUri: s3://rick-sam-helloword/a8df7c75d8056630f50d3d9bc42b6422
+      CodeUri: s3://rick-sam-helloword/fb9f4876288105c25f8d8c1364bd7188
   DeleteUser:
     Type: AWS::Serverless::Function
     Properties:
@@ -55,4 +55,4 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: delete
-      CodeUri: s3://rick-sam-helloword/09b0fa79596d4e7a17f5c73f3fb1f507
+      CodeUri: s3://rick-sam-helloword/fb9f4876288105c25f8d8c1364bd7188
